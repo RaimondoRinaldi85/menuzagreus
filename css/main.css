@@ -75,6 +75,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .deco img {
+    width: 120px;
+  }
+}
+
 .deco .usx {
   position: absolute;
   top: 0;
@@ -127,6 +133,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .title_idx img {
+    width: 100px;
+  }
+}
+
 .title {
   text-align: center;
   text-transform: uppercase;
@@ -158,6 +170,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .title .div_up {
+    width: 80px;
+  }
+}
+
 .title .div_dwn {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -183,6 +201,12 @@ p {
 .deco_idx {
   position: relative;
   height: 100vh;
+}
+
+@media only screen and (max-width: 480px) {
+  .deco_idx {
+    height: 100%;
+  }
 }
 
 .deco_idx img {
@@ -244,6 +268,13 @@ p {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .content ul li {
+    margin: .8rem .8rem 0 .8rem;
+    font-size: .8rem;
+  }
+}
+
 .content p {
   padding: 0rem 2rem;
   color: #bbbbbb;
@@ -253,6 +284,12 @@ p {
 @media only screen and (max-width: 800px) {
   .content p {
     padding: 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content p {
+    padding: 0rem .8rem;
   }
 }
 
@@ -306,6 +343,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  #book_cover .content .style_cover {
+    width: 150px;
+  }
+}
+
 #book_cover .content .crediti {
   margin-top: 2rem;
   font-size: .8rem;
@@ -355,6 +398,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  #index .deco_idx img {
+    width: 150px;
+  }
+}
+
 #index .deco_idx .usx {
   position: absolute;
   top: 0;
@@ -398,6 +447,12 @@ p {
 @media only screen and (max-width: 800px) {
   #index .content_idx .index_expl img {
     width: 70px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #index .content_idx .index_expl img {
+    width: 50px;
   }
 }
 
