@@ -438,23 +438,6 @@ p {
     }
 }
 
-#gastronomia4 {
-    background: #242623;
-    position: relative;
-    border: 1px solid #186E26;
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-
-    }
-}
-
 #gastronomia5 {
     background: #242623;
     position: relative;
@@ -610,6 +593,38 @@ p {
 }
 
 #spritz3 {
+    background: #242623;
+    position: relative;
+    border: 1px solid #186E26;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+}
+
+#spritz4 {
+    background: #242623;
+    position: relative;
+    border: 1px solid #186E26;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+}
+
+#spritz5 {
     background: #242623;
     position: relative;
     border: 1px solid #186E26;
