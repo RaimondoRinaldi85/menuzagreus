@@ -134,9 +134,10 @@ p {
 }
 
 .title_idx {
-    text-align: center;
+
 
     p {
+        padding: 1rem;
         font-size: 2rem;
         font-weight: 300;
 
@@ -280,6 +281,7 @@ p {
         li {
             margin: 0 2rem;
             font-size: 1.5rem;
+            text-align: left;
 
             @include small {
                 margin: 1rem 1rem 0 1rem;
@@ -294,17 +296,17 @@ p {
     }
 
     p {
-        padding: 0rem 2rem;
+        padding: 0;
         color: rgb(187, 187, 187);
         margin-bottom: 1rem;
 
         @include small {
-            padding: 0rem 1rem;
+            padding: 0;
             font-size: 1rem;
         }
 
         @include old {
-            padding: 0rem 1rem;
+            padding: 0;
             font-size: .7rem;
         }
     }
@@ -456,15 +458,19 @@ p {
                 a {
                     font-weight: 700;
                     text-transform: uppercase;
-                    font-size: .9rem;
+                    font-size: 1rem;
 
                     @include small {
-                        font-size: .7rem;
+                        font-size: .9rem;
                     }
 
                     @include old {
-                        font-size: .5rem;
+                        font-size: .7rem;
                     }
+                }
+
+                @include old {
+                    margin-top: 1.5rem;
                 }
             }
         }
@@ -1112,6 +1118,10 @@ p {
 .modal2-header .title {
     font-size: 2rem;
     font-weight: 300;
+
+    @include old {
+        font-size: 1.5rem;
+    }
 }
 
 .modal2-header .close-button {
@@ -1135,4 +1145,8 @@ p {
 .modal2-body ul li {
     padding: 1rem 15px;
     font-size: 1.3rem;
+
+    @include old {
+        font-size: 1rem;
+    }
 }

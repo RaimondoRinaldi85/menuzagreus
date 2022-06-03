@@ -117,11 +117,8 @@ p {
           transform: rotate(180deg);
 }
 
-.title_idx {
-  text-align: center;
-}
-
 .title_idx p {
+  padding: 1rem;
   font-size: 2rem;
   font-weight: 300;
 }
@@ -289,6 +286,7 @@ p {
 .content ul li {
   margin: 0 2rem;
   font-size: 1.5rem;
+  text-align: left;
 }
 
 @media only screen and (max-width: 800px) {
@@ -306,21 +304,21 @@ p {
 }
 
 .content p {
-  padding: 0rem 2rem;
+  padding: 0;
   color: #bbbbbb;
   margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
   .content p {
-    padding: 0rem 1rem;
+    padding: 0;
     font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .content p {
-    padding: 0rem 1rem;
+    padding: 0;
     font-size: .7rem;
   }
 }
@@ -505,18 +503,24 @@ p {
 #index .content_idx ul li a {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
+  #index .content_idx ul li a {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
   #index .content_idx ul li a {
     font-size: .7rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  #index .content_idx ul li a {
-    font-size: .5rem;
+  #index .content_idx ul li {
+    margin-top: 1.5rem;
   }
 }
 
@@ -1364,6 +1368,12 @@ p {
   font-weight: 300;
 }
 
+@media only screen and (max-width: 375px) {
+  .modal2-header .title {
+    font-size: 1.5rem;
+  }
+}
+
 .modal2-header .close-button {
   cursor: pointer;
   border: none;
@@ -1387,5 +1397,11 @@ p {
 .modal2-body ul li {
   padding: 1rem 15px;
   font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .modal2-body ul li {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
