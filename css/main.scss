@@ -9,6 +9,12 @@
     src: url(../font/BKMNOS.ttf);
 }
 
+@mixin old {
+    @media only screen and (max-width: 375px) {
+        @content;
+    }
+}
+
 @mixin small {
     @media only screen and (max-width: 800px) {
         @content;
@@ -30,7 +36,8 @@
 html {
     font-family: 'Bookman';
     color: white;
-    background-color: rgb(17, 17, 17);
+    scroll-snap-type: y mandatory;
+    background-color: rgb(30, 30, 30);
 }
 
 body {
@@ -59,6 +66,10 @@ hr {
     border: none;
 }
 
+section {
+    scroll-snap-align: start;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -85,7 +96,11 @@ p {
         width: 300px;
 
         @include small {
-            width: 180px;
+            width: 150px;
+        }
+
+        @include old {
+            width: 100px;
         }
     }
 
@@ -124,6 +139,10 @@ p {
     p {
         font-size: 2rem;
         font-weight: 300;
+
+        @include small {
+            font-size: 1.3rem;
+        }
     }
 
     img {
@@ -147,6 +166,14 @@ p {
         text-transform: uppercase;
         font-weight: 300;
         font-size: .7rem;
+
+        @include small {
+            font-size: .5rem;
+        }
+
+        @include old {
+            font-size: .3rem;
+        }
     }
 
     h2 {
@@ -155,28 +182,37 @@ p {
         margin-bottom: .9rem;
         color: white;
         letter-spacing: 3px;
-    }
-
-    .div_up {
-        width: 100px;
 
         @include small {
-            width: 100px;
+            font-size: 1rem;
+        }
 
+        @include old {
+            font-size: .7rem;
         }
     }
+}
 
-    .div_dwn {
-        transform: rotate(180deg);
+.div_up {
+    width: 100px;
+
+    @include small {
         width: 100px;
-        margin-bottom: 3rem;
-
-        @include small {
-            width: 100px;
-        }
 
     }
 }
+
+.div_dwn {
+    transform: rotate(180deg);
+    width: 100px;
+    margin-bottom: 3rem;
+
+    @include small {
+        width: 100px;
+    }
+
+}
+
 
 .continua {
     text-align: center;
@@ -184,6 +220,10 @@ p {
     img {
         width: 150px;
         margin-top: 3rem;
+
+        @include old {
+            width: 70px;
+        }
     }
 }
 
@@ -195,8 +235,13 @@ p {
         width: 300px;
 
         @include small {
-            width: 180px;
+            width: 150px;
         }
+
+        @include old {
+            width: 100px;
+        }
+
     }
 
     .usx {
@@ -240,6 +285,11 @@ p {
                 margin: 1rem 1rem 0 1rem;
                 font-size: 1rem;
             }
+
+            @include old {
+                margin: .8rem .8rem 0 .8rem;
+                font-size: .7rem;
+            }
         }
     }
 
@@ -250,6 +300,12 @@ p {
 
         @include small {
             padding: 0rem 1rem;
+            font-size: 1rem;
+        }
+
+        @include old {
+            padding: 0rem 1rem;
+            font-size: .7rem;
         }
     }
 }
@@ -279,6 +335,10 @@ p {
             @include small {
                 width: 300px;
             }
+
+            @include old {
+                width: 230px;
+            }
         }
 
         .style_cover {
@@ -287,6 +347,10 @@ p {
 
             @include small {
                 width: 200px;
+            }
+
+            @include old {
+                width: 150px;
             }
         }
 
@@ -333,7 +397,11 @@ p {
             width: 300px;
 
             @include small {
-                width: 180px;
+                width: 150px;
+            }
+
+            @include old {
+                width: 100px;
             }
         }
 
@@ -374,6 +442,10 @@ p {
 
             p {
                 font-size: .7rem;
+
+                @include old {
+                    font-size: .5rem;
+                }
             }
         }
 
@@ -384,6 +456,15 @@ p {
                 a {
                     font-weight: 700;
                     text-transform: uppercase;
+                    font-size: .9rem;
+
+                    @include small {
+                        font-size: .7rem;
+                    }
+
+                    @include old {
+                        font-size: .5rem;
+                    }
                 }
             }
         }
@@ -504,12 +585,32 @@ p {
         .fancy_up {
             width: 300px;
             padding: 3rem;
+
+            @include small {
+                width: 250px;
+                padding: 2rem;
+            }
+
+            @include old {
+                width: 200px;
+                padding: 2rem;
+            }
         }
 
         .fancy_dwn {
             width: 300px;
             padding: 3rem;
             transform: rotate(180deg);
+
+            @include small {
+                width: 250px;
+                padding: 2rem;
+            }
+
+            @include old {
+                width: 200px;
+                padding: 2rem;
+            }
         }
 
         p {
@@ -523,6 +624,12 @@ p {
                 padding: 1rem;
                 font-size: 1rem;
                 width: 90%;
+            }
+
+            @include old {
+                padding: .7rem;
+                font-size: .7rem;
+                width: 80%;
             }
         }
     }
@@ -769,29 +876,51 @@ p {
         .fancy_up {
             width: 300px;
             padding: 3rem;
-        }
-
-        .fancy_dwn {
-            width: 300px;
-            padding: 3rem;
-            transform: rotate(180deg);
-        }
-
-        p {
-            padding: 3rem 3rem;
-            color: rgb(187, 187, 187);
-            width: 50%;
-            margin: 0 auto;
-            font-size: 1.5rem;
 
             @include small {
-                padding: 1rem;
-                font-size: 1rem;
-                width: 90%;
+                width: 250px;
+                padding: 2rem;
+            }
+
+            @include old {
+                width: 200px;
+                padding: 2rem;
             }
         }
     }
+
+    .fancy_dwn {
+        width: 300px;
+        padding: 3rem;
+        transform: rotate(180deg);
+
+        @include small {
+            width: 250px;
+            padding: 2rem;
+        }
+
+        @include old {
+            width: 200px;
+            padding: 2rem;
+        }
+    }
 }
+
+p {
+    padding: 3rem 3rem;
+    color: rgb(187, 187, 187);
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+
+    @include small {
+        padding: 1rem;
+        font-size: 1rem;
+        width: 90%;
+    }
+
+}
+
 
 #caffe1 {
     background: #242623;
@@ -826,29 +955,51 @@ p {
         .fancy_up {
             width: 300px;
             padding: 3rem;
-        }
-
-        .fancy_dwn {
-            width: 300px;
-            padding: 3rem;
-            transform: rotate(180deg);
-        }
-
-        p {
-            padding: 3rem 3rem;
-            color: rgb(187, 187, 187);
-            width: 50%;
-            margin: 0 auto;
-            font-size: 1.5rem;
 
             @include small {
-                padding: 1rem;
-                font-size: 1rem;
-                width: 90%;
+                width: 250px;
+                padding: 2rem;
+            }
+
+            @include old {
+                width: 200px;
+                padding: 2rem;
             }
         }
     }
+
+    .fancy_dwn {
+        width: 300px;
+        padding: 3rem;
+        transform: rotate(180deg);
+
+        @include small {
+            width: 250px;
+            padding: 2rem;
+        }
+
+        @include old {
+            width: 200px;
+            padding: 2rem;
+        }
+    }
+
+
+    p {
+        padding: 3rem 3rem;
+        color: rgb(187, 187, 187);
+        width: 50%;
+        margin: 0 auto;
+        font-size: 1.5rem;
+
+        @include small {
+            padding: 1rem;
+            font-size: 1rem;
+            width: 90%;
+        }
+    }
 }
+
 
 #end {
     background: #242623;
@@ -867,30 +1018,51 @@ p {
         .fancy_up {
             width: 300px;
             padding: 3rem;
-        }
-
-        .fancy_dwn {
-            width: 300px;
-            padding: 3rem;
-            transform: rotate(180deg);
-        }
-
-        p {
-            width: 90%;
-            padding: 3rem 3rem;
-            color: rgb(187, 187, 187);
-            margin: 0 auto;
-            font-size: 1.3rem;
-            text-transform: none;
 
             @include small {
-                padding: 1rem;
-                font-size: 1rem;
-                width: 90%;
+                width: 250px;
+                padding: 2rem;
+            }
+
+            @include old {
+                width: 200px;
+                padding: 2rem;
             }
         }
     }
+
+    .fancy_dwn {
+        width: 300px;
+        padding: 3rem;
+        transform: rotate(180deg);
+
+        @include small {
+            width: 250px;
+            padding: 2rem;
+        }
+
+        @include old {
+            width: 200px;
+            padding: 2rem;
+        }
+    }
 }
+
+p {
+    width: 90%;
+    padding: 3rem 3rem;
+    color: rgb(187, 187, 187);
+    margin: 0 auto;
+    font-size: 1.3rem;
+    text-transform: none;
+
+    @include small {
+        padding: 1rem;
+        font-size: 1rem;
+        width: 90%;
+    }
+}
+
 
 /* modal indice */
 #overlay {
