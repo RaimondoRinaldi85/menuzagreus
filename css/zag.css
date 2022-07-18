@@ -231,7 +231,6 @@ hr {
     display: flex;
     align-items: center;
     position: relative;
-    cursor: pointer;
 }
 
 .accordion-item-header::after {
