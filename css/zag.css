@@ -239,6 +239,7 @@ hr {
     font-size: 2rem;
     position: absolute;
     right: 1rem;
+    transition: 0.2s ease-out;
 }
 
 .accordion-item-header.active::after {
