@@ -127,6 +127,7 @@ body {
 
 #book_cover .content .menu {
     color: green;
+    margin-bottom: .5rem;
 }
 
 #book_cover .content p {
@@ -234,14 +235,14 @@ hr {
 }
 
 .accordion-item-header::after {
-    content: "\002B";
+    content: "🍷";
     font-size: 2rem;
     position: absolute;
     right: 1rem;
 }
 
 .accordion-item-header.active::after {
-    content: "\2212";
+    content: "🍷";
 }
 
 .accordion-item-body {
