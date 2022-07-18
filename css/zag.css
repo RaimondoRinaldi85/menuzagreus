@@ -243,6 +243,8 @@ hr {
 
 .accordion-item-header.active::after {
     content: "🍷";
+    transform: rotate(45deg);
+
 }
 
 .accordion-item-body {
