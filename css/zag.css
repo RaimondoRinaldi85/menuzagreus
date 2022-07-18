@@ -36,6 +36,8 @@ body {
 #book_cover {
     background: #242623;
     height: 100vh;
+    text-align: center;
+
 }
 
 #book_cover .content {
@@ -83,6 +85,13 @@ body {
 
 #book_cover .content li :hover {
     color: green;
+}
+
+@media only screen and (min-width: 1300px) {
+    #book_cover {
+        margin: 0 auto;
+        width: 53%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -304,9 +313,9 @@ hr {
 
 .sign {
     background-color: #186E26;
-    padding: .3rem;
+    padding: .2rem;
     text-align: center;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 .sign a {
