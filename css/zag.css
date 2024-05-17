@@ -218,6 +218,7 @@ hr {
 /* accordion */
 
 .accordion {
+
     width: 90%;
     max-width: 1000px;
     margin: 2rem auto;
@@ -233,6 +234,7 @@ hr {
 }
 
 .accordion-item-header {
+    cursor: pointer;
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
